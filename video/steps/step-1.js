@@ -46,20 +46,35 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 					});
 				      // Hook up the submit button to log to the console
 				      document.getElementById('submit-' + step).addEventListener('click',function(event) {
-				    	  event.stopPropagation();
-				    	  console.log(editor.validate());
-				    	  Wizard.goToNextStep(event);
-				    	  console.log('sending to swagger api');
-				    	  console.log(editor.getValue());
-				    	  var jsonString = JSON.stringify(editor.getValue());
-				    	  var meta = Wizard.getMetaData();
-				    	  console.log(meta);
-				    	  var data = {
+				    	  	event.stopPropagation();
+				    	  	console.log(editor.validate());
+				    	  	Wizard.goToNextStep(event);
+				    	  	console.log('sending to swagger api');
+				    	  	console.log(editor.getValue());
+
+				  			var hash = location.hash.split('=');
+				  			var data = hash[1].split('-');
+				  			var meta = {
+								"absolute-url" : document.getElementById('iframe').getAttribute('src'),
+								"state" : data[0],
+								"block" : data[2],
+								"type" : data[4]
+				  			}
+				  			console.log(meta);
+
+				  			var fullData = {
+				  				"meta" : meta,
+				  				"editor" : editor.getValue(),
+				  			}
+
+				  		 	var jsonString = JSON.stringify(fullData);
+
+				  			var data = {
 				    			  "id" : 112,
 				    			  "data" : jsonString
 				    			};
 
-				    	  promise.post('http://localhost:8080/api/block', data)
+				  			promise.post('http://localhost:8080/api/block', data)
 
 				      });
 
