@@ -1,7 +1,7 @@
 function init(step){
 
 
-promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/basic.json').then(
+promise.get('../clients/easydrain/wizards/video/data/basic.json').then(
 				function(error, text, xhr) {
 					if (error) {
 						alert('Error ' + xhr.status);
@@ -25,10 +25,10 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/basic.json').
 								title : "Person",
 								headerTemplate : "{{i}} - {{self.name}}",
 								oneOf : [ {
-									$ref : Wizard.config.baseUrl + "blocks/block-video/video/schema/basic_person.json",
+									$ref : "http://localhost/core9-base-theme/src/editor/clients/easydrain/wizards/video/schema/basic_person.json",
 									title : "Basic Person"
 								}, {
-									$ref : Wizard.config.baseUrl + "blocks/block-video/video/schema/person.json",
+									$ref : "http://localhost/core9-base-theme/src/editor/clients/easydrain/wizards/video/schema/person.json",
 									title : "Complex Person"
 								} ]
 							}
