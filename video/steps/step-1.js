@@ -58,7 +58,8 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 								"absolute-url" : document.getElementById('iframe').getAttribute('src'),
 								"state" : data[0],
 								"block" : data[2],
-								"type" : data[4]
+								"type" : data[4],
+								"template" : Wizard.widgetJson[data[4]].template
 				  			}
 				  			console.log(meta);
 
