@@ -52,23 +52,10 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 				    	  console.log('sending to swagger api');
 				    	  console.log(editor.getValue());
 				    	  var jsonString = JSON.stringify(editor.getValue());
-
+				    	  var meta = Wizard.getMetaData();
+				    	  console.log(meta);
 				    	  var data = {
-				    			  "id" : 111,
-				    			  "category" : {
-				    			    "id" : 2,
-				    			    "name" : "Cats"
-				    			  },
-				    			  "name" : "Cat 1",
-				    			  "photoUrls" : [ "url1", "url2" ],
-				    			  "tags" : [ {
-				    			    "id" : 1,
-				    			    "name" : "tag1"
-				    			  }, {
-				    			    "id" : 2,
-				    			    "name" : "tag2"
-				    			  } ],
-				    			  "status" : "available",
+				    			  "id" : 112,
 				    			  "data" : jsonString
 				    			};
 
