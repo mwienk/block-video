@@ -51,6 +51,29 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 				    	  Wizard.goToNextStep(event);
 				    	  console.log('sending to swagger api');
 				    	  console.log(editor.getValue());
+				    	  var jsonString = JSON.stringify(editor.getValue());
+
+				    	  var data = {
+				    			  "id" : 111,
+				    			  "category" : {
+				    			    "id" : 2,
+				    			    "name" : "Cats"
+				    			  },
+				    			  "name" : "Cat 1",
+				    			  "photoUrls" : [ "url1", "url2" ],
+				    			  "tags" : [ {
+				    			    "id" : 1,
+				    			    "name" : "tag1"
+				    			  }, {
+				    			    "id" : 2,
+				    			    "name" : "tag2"
+				    			  } ],
+				    			  "status" : "available",
+				    			  "data" : jsonString
+				    			};
+
+				    	  promise.post('http://localhost:8080/api/block', data)
+
 				      });
 
 				});
