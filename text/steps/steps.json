@@ -2,10 +2,10 @@
 
 	{
 			"label":"Step 1",
-			"file":"blocks/block-video/video/steps/step-1.js"
+			"file":"blocks/block-video/text/steps/step-1.js"
 	}, {
             "label":"Step 2",
-            "file":"blocks/block-video/video/steps/step-2.js"
+            "file":"blocks/block-video/text/steps/step-2.js"
     }
 
 ]
