@@ -74,7 +74,14 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 				    			  "data" : jsonString
 				    			};
 
-				  			promise.post('http://localhost:8080/api/block', data)
+				  			promise.post('http://localhost:8080/api/block', data).then(
+				  					function(error, text, xhr) {
+				  						if (error) {
+				  							alert('Error ' + xhr.status);
+				  							return;
+				  						}
+				  						console.log(text);
+				  					});
 
 				      });
 
