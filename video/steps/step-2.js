@@ -18,7 +18,7 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 						// The schema for the editor
 						schema : {
 							type : "object",
-							title : "Video",
+							title : "Video 2",
 							  "properties": {
 							    "url": {
 							      "type": "string",
