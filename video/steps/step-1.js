@@ -20,10 +20,14 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 							type : "object",
 							title : "Video",
 							  "properties": {
-							    "url": {
+							    "title": {
 							      "type": "string",
-							      "default": "//www.youtube.com/embed/CwqSbBxUMpY",
+							      "default": "nieuwe title",
 							    },
+							    "url": {
+								      "type": "string",
+								      "default": "//www.youtube.com/embed/CwqSbBxUMpY",
+								},
 							    "content" : {
 							    	  "type": "string",
 							    	  "format": "html",
