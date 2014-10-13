@@ -23,7 +23,14 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 							    "url": {
 							      "type": "string",
 							      "default": "//www.youtube.com/embed/CwqSbBxUMpY",
-							    }
+							    },
+							    "content" : {
+							    	  "type": "string",
+							    	  "format": "html",
+							    	  "options": {
+							    	    "wysiwyg": true
+							    	  }
+							    	}
 							  }
 						},
 						// Seed the form with a starting value
