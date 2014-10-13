@@ -22,22 +22,8 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 							  "properties": {
 							    "url": {
 							      "type": "string",
-							      "default": "http://youtu.be/kDfw4yt554g",
-							    },
-							    "height": {
-							      "type": "string",
-							      "default": "315",
-							    },
-							    "width": {
-								      "type": "string",
-								      "default": "560",
-								},
-							    "age": {
-								      "type": "integer",
-								      "default": 21,
-								      "minimum": 18,
-								      "maximum": 99
-								    }
+							      "default": "//www.youtube.com/embed/CwqSbBxUMpY",
+							    }
 							  }
 						},
 						// Seed the form with a starting value
