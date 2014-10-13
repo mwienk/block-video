@@ -32,6 +32,12 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 								      "type": "string",
 								      "default": "560",
 								},
+								"age": {
+								      "type": "integer",
+								      "default": 21,
+								      "minimum": 18,
+								      "maximum": 99
+								    }
 							  }
 						},
 						// Seed the form with a starting value
