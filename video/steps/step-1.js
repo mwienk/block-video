@@ -85,6 +85,7 @@ promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').
 				  							return;
 				  						}
 				  						console.log(text);
+				  						document.getElementById('iframe').contentWindow.location = location.href;
 				  					});
 
 				      });
