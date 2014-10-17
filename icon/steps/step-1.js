@@ -30,7 +30,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json
 							    "categories": {
 							    	"type": "string",
 							    	"default": "cat-one cat-all"
-							    }
+							    },
 							    "num": {
 								      "type": "number",
 								      "default": 12,
