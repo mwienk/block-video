@@ -21,7 +21,7 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 							  "properties": {
 							  	"bars": {
 							  		"type": "array",
-							  		"items" {
+							  		"items": {
 								  		"type": "object",
 								  		"properties": {
 								  			"name": {
