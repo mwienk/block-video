@@ -13,7 +13,7 @@
      data-type="barchart" 
      data-chart="bar"
      data-labels="{$labels}"
-     data-bars="{foreach $bar in $bars}{$bar.name}{if not isLast($bar)},{/if}{/foreach},"
+     data-bars="{foreach $bar in $bars}{$bar.name}{if not isLast($bar)},{/if}{/foreach}"
      {foreach $bar in $bars}
        data-{$bar.name}="{$bar.values}"
      {/foreach}
