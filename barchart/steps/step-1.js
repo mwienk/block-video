@@ -2,13 +2,6 @@ function init(step){
 
 	console.log(Wizard.config.baseUrl);
 
- * @param categories
- * @param bars
- * @param title
- * @param background
- * @param width
- * @param height
-
 promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barchart.json').then(
 				function(error, text, xhr) {
 					if (error) {
