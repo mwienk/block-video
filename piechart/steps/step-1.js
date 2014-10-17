@@ -21,11 +21,11 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/barchart/data/barch
 							  "properties": {
 							  	"labels": {
 					  				"type": "string",
-					  				"default": "tw",
+					  				"default": "tw,nl,de",
 							  	},
 							  	"values": {
 					  				"type": "string",
-					  				"default": "tw",
+					  				"default": "10,20,10",
 							  	},
 							    "title": {
 							      "type": "string",
