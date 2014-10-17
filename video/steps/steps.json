@@ -2,7 +2,7 @@
 
 	{
 			"label":"Step 1",
-			"file":"/site/blocks/block-video/video/steps/step-1.js"
+			"file":"http://localhost:8080/site/blocks/block-video/video/steps/step-1.js"
 	}
 
 ]
