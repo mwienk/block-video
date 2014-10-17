@@ -1,0 +1,10 @@
+{
+	title: "Titel",
+	icon: "rocket",
+    categories: "cat-one cat-all"
+    num: 12,
+    txt  "",
+    width: 340,
+	height: 340,
+	background: "green"
+}

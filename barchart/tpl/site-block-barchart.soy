@@ -1,0 +1,34 @@
+{namespace site.block}
+/**
+ * @param categories
+ * @param bars
+ * @param title
+ * @param background
+ * @param width
+ * @param height
+ * @param labels
+ */
+{template .barchart}
+<div class="mega-entry {$categories} patent block" 
+     data-type="chart" 
+     data-chart="bar"
+     data-labels="{$labels}"
+     data-bars="{foreach bar in bars}{$bar.name}{if not isLast($bar)},{/if}{/foreach},"
+     {foreach bar in bars}
+       data-{$bar.name}="{$bar.values}"
+     {/foreach}
+     data-width="{$width}"
+     data-height="{$height}"
+  >
+  <div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
+    <div class="mega-title">{$title}</div>
+    <p>&nbsp;</p>
+    <div class="chart-div" id="jaarplan-aandeel-htsm"><canvas height="450" width="600"></canvas></div>
+  </div>
+  <a class="fancybox" rel="group" href="#jaarplan-aandeel-htsm" title="{$title}" data-bkgrnd="{$background}">
+    <div class="mega-hover">
+      <div class="mega-hoverview"></div>
+    </div>
+  </a>
+</div>
+{/template}
