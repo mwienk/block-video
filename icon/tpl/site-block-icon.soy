@@ -11,12 +11,12 @@
  * @param background
  */
 {template .icon}
-<div class="mega-entry {$categories} sign block" data-type="icon" data-src="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;{$txt ?: 'txt=$txt'}" data-width="{$width}" data-height="{$height}">
+<div class="mega-entry {$categories} sign block" data-type="icon" data-src="/jaarplan-nieuw/svg-generator.php?img={$icon}{$txt ? '&amp;txt=$txt' : ''}{$num ? '&amp;num=$num' : ''}" data-width="{$width}" data-height="{$height}">
 	<div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
     	<div class="mega-title">{$title}</div>
         	<p>&nbsp;</p>
         </div>
-        <a class="fancybox" id="one" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}{$txt ?: '&amp;txt=$txt'}{$num ?: '&amp;num=$num'}" title="{$title}" data-bkgrnd="{$background}">
+        <a class="fancybox" id="one" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}{$txt ? '&amp;txt=$txt' : ''}{$num ? '&amp;num=$num' : ''}" title="{$title}" data-bkgrnd="{$background}">
           <div class="mega-hover">
             <div class="mega-hoverview"></div>
           </div>
