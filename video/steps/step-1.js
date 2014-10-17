@@ -3,7 +3,7 @@ function init(step){
 	console.log(Wizard.config.baseUrl);
 
 
-promise.get(Wizard.config.baseUrl + 'blocks/block-video/video/data/video.json').then(
+promise.get(Wizard.config.baseUrl + '/site/blocks/block-video/video/data/video.json').then(
 				function(error, text, xhr) {
 					if (error) {
 						alert('Error ' + xhr.status);
