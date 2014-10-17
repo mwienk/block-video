@@ -1,9 +1,25 @@
 {namespace site.block}
 /**
  * Says hello to the world.
+ * @categories
+ * @icon
+ * @txt
+ * @num
+ * @width
+ * @height
+ * @title
+ * @background
  */
 {template .icon}
-  <div class="block" data-type="icon">
-  	Hello world!
-  </div>
+<div class="mega-entry {$categories} sign" data-src="/jaarplan-nieuw/svg-generator.php?img={$icon}&amp;{$txt ?: 'txt=$txt'}" data-width="{$width}" data-height="{$height}">
+	<div class="mega-covercaption mega-square-top mega-landscape-bottom mega-portrait-bottom">
+    	<div class="mega-title">{$title}</div>
+        	<p>&nbsp;</p>
+        </div>
+        <a class="fancybox" id="one" rel="group" href="/jaarplan-nieuw/svg-generator.php?img={$icon}{$txt ?: '&amp;txt=$txt'}{$num ?: '&amp;num=$num'}" title="{$title}" data-bkgrnd="{$background}">
+          <div class="mega-hover">
+            <div class="mega-hoverview"></div>
+          </div>
+        </a>
+      </div>
 {/template}

@@ -2,7 +2,6 @@ function init(step){
 
 	console.log(Wizard.config.baseUrl);
 
-
 promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json').then(
 				function(error, text, xhr) {
 					if (error) {
@@ -18,23 +17,40 @@ promise.get(Wizard.config.baseUrl + 'site/blocks/block-video/icon/data/icon.json
 						// The schema for the editor
 						schema : {
 							type : "object",
-							title : "Video",
+							title : "Icon",
 							  "properties": {
 							    "title": {
 							      "type": "string",
-							      "default": "nieuwe title",
+							      "default": "Titel",
 							    },
-							    "url": {
-								      "type": "string",
-								      "default": "//www.youtube.com/embed/CwqSbBxUMpY",
+							    "icon": {
+							    	"type": "string",
+							    	"default": "rocket",
+							    },
+							    "categories": {
+							    	"type": "string",
+							    	"default": "cat-one cat-all"
+							    }
+							    "num": {
+								      "type": "number",
+								      "default": 12,
 								},
-							    "content" : {
+							    "txt" : {
 							    	  "type": "string",
-							    	  "format": "html",
-							    	  "options": {
-							    	    "wysiwyg": true
-							    	  }
-							    	}
+							    	  "default": "",
+							    },
+							    "width": {
+								      "type": "number",
+								      "default": 340,
+								},
+								"height": {
+								      "type": "number",
+								      "default": 340,
+								},
+								"background": {
+								      "type": "string",
+								      "default": "green",
+								},
 							  }
 						},
 						// Seed the form with a starting value
